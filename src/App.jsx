@@ -7,7 +7,7 @@ function App() {
 
   return (
     <>
-      Hehe
+        <h1 style={{ color: 'white' }}></h1>
     </>
   )
 }
