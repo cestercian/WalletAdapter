@@ -3,10 +3,10 @@ import {useConnection, useWallet} from "@solana/wallet-adapter-react";
 export default function Airdrop() {
 
     const wallet = useWallet()
-    const connection = useConnection()
+    const { connection} = useConnection()
 
     async function sendAirdropToUser() {
-       await connection.requestAirdrop(wallet.publicKey, 10)
+       await connection.requestAirdrop(wallet.publicKey, 1000000000)
         alert("airdropped sol")
     }
 
