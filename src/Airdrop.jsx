@@ -1,8 +1,20 @@
+import {useConnection, useWallet} from "@solana/wallet-adapter-react";
+
 export default function Airdrop() {
+
+    const wallet = useWallet()
+    const connection = useConnection()
+
+    async function sendAirdropToUser() {
+       await connection.requestAirdrop(wallet.publicKey, 10)
+        alert("airdropped sol")
+    }
+
     return (
         <>
+            HI {wallet.publicKey ? wallet.publicKey.toString() : "Wallet not connected"}
             <input type={"text"} placeholder={"Amount"} ></input>
-            <button>Send Airdrop</button>
+            <button onClick={sendAirdropToUser}>Send Airdrop</button>
         </>
     )
 }
