@@ -14,8 +14,6 @@ import Airdrop from "./Airdrop.jsx";
 
 function App() {
 
-
-
   return (
     <>
         <ConnectionProvider endpoint={"https://solfaucet.com"}>
