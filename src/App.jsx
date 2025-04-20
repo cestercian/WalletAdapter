@@ -13,21 +13,22 @@ import './App.css'
 import Airdrop from "./Airdrop.jsx";
 
 function App() {
-
   return (
-    <>
-        <ConnectionProvider endpoint={"https://solana-devnet.g.alchemy.com/v2/c1M-5kml56ZKd4bCCknfmVZ_AYevBidY"}>
-            <WalletProvider wallets={[]} autoConnect>
-                <WalletModalProvider>
-                    <WalletMultiButton/>
-                    <WalletDisconnectButton/>
-                    <div>HEHE</div>
-                    <Airdrop></Airdrop>
-                </WalletModalProvider>
-            </WalletProvider>
-        </ConnectionProvider>
-    </>
-  )
+    <div className="app-container">
+      <div className="title">Solana Wallet Adapter Demo</div>
+      <ConnectionProvider endpoint={"https://solana-devnet.g.alchemy.com/v2/c1M-5kml56ZKd4bCCknfmVZ_AYevBidY"}>
+        <WalletProvider wallets={[]} autoConnect>
+          <WalletModalProvider>
+            <div className="wallet-buttons">
+              <WalletMultiButton />
+              <WalletDisconnectButton />
+            </div>
+            <Airdrop />
+          </WalletModalProvider>
+        </WalletProvider>
+      </ConnectionProvider>
+    </div>
+  );
 }
 
 export default App
