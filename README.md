@@ -9,7 +9,6 @@ This is a minimal React + Vite app demonstrating integration with the Solana Wal
 - 🎁 Airdrop SOL to the connected wallet using `connection.requestAirdrop`
 - 🧼 Clean UI with React and basic CSS styling
 - ⚡️ Vite for blazing-fast development experience
-- ✅ ESLint configured with React best practices
 
 ## 🧱 Project Structure
 
